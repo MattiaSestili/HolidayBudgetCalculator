@@ -1,0 +1,86 @@
+﻿
+body 
+{
+
+    background-color: white;
+}
+
+.dataEntryArea
+{
+    background-color: grey;
+    /*height: 420px;*/
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 25px;
+}
+.customContainer
+{
+    min-width: 300px;
+    max-width: 1300px;
+}
+
+.jumbotron 
+{
+    color: white;
+    background-image: url('../tokyo-street-at-night-high-quality-wallpaper.jpg');
+    background-repeat: no-repeat;
+    margin-left: 65px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*You shouldn't override Bootstrap columns like this, unless you are sure that you want
+    the override to work everywhere in your code.  It's better to add another class to the 
+    HTML tag and style that (which is what I've done)
+*/
+/*.col-sm-9 .col-sm-3 
+{
+    width: 280px;
+}*/
+
+/*i changed thead fixed width of the flight column to a min-width and also gave the
+    other columns a min-width - that stopped them getting tangled when the screen size was reduced
+*/ 
+.flightCostStyle
+{
+   min-width: 300px;
+   margin-bottom: 10px;
+}
+.transportsStyle
+{
+   /*margin-left: 25%;*/
+   min-width: 250px;
+}
+
+.daycostParagraph
+{
+   /*margin-left: 20px;*/
+   min-width: 250px;
+}
+
+/*I took off the big right margin and did a right float instead*/
+.description
+ {
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*margin-right:20%;*/
+    float: right;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 50px;
+ }
+
+.form-control
+{
+    display: inline;
+    max-width: 100px;
+}
+
+h2
+{
+    color: red;
+    font: bold;
+    font-size: 18px;
+}
