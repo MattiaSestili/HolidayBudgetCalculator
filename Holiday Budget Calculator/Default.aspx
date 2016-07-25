@@ -159,8 +159,7 @@
                 But if you break it down and think about <br />
                 what you might spend in a few key areas,
                 you can get a realistic travel budget in mind. 
-                Read these tips and use our travel budget<br />
-                calculator, so you can plan ahead and avoid any spending shocks along the way.
+                Use our travel budget calculator, so you can plan ahead and avoid any spending shocks along the way.
                 </p>
         </div>  
      </div>      
