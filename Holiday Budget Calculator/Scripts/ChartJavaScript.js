@@ -19,7 +19,7 @@
 		    type: chartType,
 		    indexLabelFontFamily: "Garamond",
 		    indexLabelFontSize: 20,
-		    indexLabel: "{label} {y}%",
+		    indexLabel: "{label} {y}£",
 		    startAngle: -20,
 		    dataPoints: [
 				{ y: accomodation, label: "Accomodation" },
