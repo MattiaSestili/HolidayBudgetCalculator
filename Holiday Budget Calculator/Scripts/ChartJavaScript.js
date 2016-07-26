@@ -22,7 +22,7 @@
 		    indexLabel: "{label} £{y}",
 		    startAngle: -20,
 		    dataPoints: [
-                { y: flight, label: "Flight"},
+                { y: flight, label: "Flight" },
 				{ y: accomodation, label: "Accomodation" },
 				{ y: taxi, label: "Taxi" },
 				{ y: bus,  label: "Bus" },

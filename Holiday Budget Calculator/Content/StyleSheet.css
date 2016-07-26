@@ -84,3 +84,9 @@ h2
     font: bold;
     font-size: 18px;
 }
+
+col-sm-4 col-sm-offset-1
+{
+    color: black;
+    font-weight: 400;
+}
