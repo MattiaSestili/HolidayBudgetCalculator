@@ -24,10 +24,13 @@
 <body>
  
 <form id="form1" runat="server">
+
 <div class="customContainer">
-  <div class ="jumbotron">
-      <h1>Holiday Budget Calculator</h1>
-  </div>
+ 
+     <div class ="jumbotron">
+       <h1>Holiday Budget Calculator</h1>
+    </div>
+
 </div>
 
 
@@ -37,14 +40,22 @@
             <div class="col-sm-9 dataEntryArea">     
                  
                 <div class="col-sm-3 flightCostStyle">  
+
                     <p>Flight Costs</p>
+
                         <asp:Label ID="labelPlace" runat="server" Text="Where are you going?"></asp:Label>
                         <br/>
                         <asp:TextBox ID="TextBoxTravel" runat="server" CssClass="form-control txtBox" Width="180px" ForeColor="Black"></asp:TextBox>          
                         <br/>
+                        <asp:Label ID="labelCostFlight" runat="server" Text="How much have you paid?"></asp:Label>
+                        <br/>
+                        <asp:TextBox ID="TextBoxCostFlight" runat="server" CssClass="form-control txtBox" Width="180px" ForeColor="Black"></asp:TextBox>          
+                        <br/>
+                        <br/>
                         <br/>
         
                     <p>How many people?</p>
+
                         <asp:Label ID="Label5" runat="server" Text="Adult:"></asp:Label>
                         <br/>
                         <asp:Button ID="ButtonLessPerson" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessPerson_Click" CssClass="btn btn-default" />
@@ -81,6 +92,7 @@
                         <br/>
 
                     <p>How many nights?</p>
+
                         <asp:Button ID="ButtonLessDays" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessDays_Click" CssClass="btn btn-default" />
                         <asp:TextBox ID="TextBoxDays" runat="server" CssClass="form-control txtBox" Width="180px" ForeColor="Black" OnTextChanged="TextBoxDays_TextChanged" AutoPostBack="True"></asp:TextBox>
                         <asp:Button ID="ButtonAddDays" runat="server" Text="+" ForeColor="Black" OnClick="ButtonAddDays_Click" CssClass="btn btn-default" />

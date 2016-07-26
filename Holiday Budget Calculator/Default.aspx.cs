@@ -12,6 +12,7 @@ public partial class _Default : System.Web.UI.Page
     int numberDays;
 
     string travel;
+    double flight;
     double accomodation;
     double hotelPerDays;
     double hotelPerNight;
@@ -142,6 +143,7 @@ public partial class _Default : System.Web.UI.Page
 
     private void drawChart(string chartType)
     {
+        flight = getData(TextBoxCostFlight);
         hotelPerDays = getData(TextBoxDays);
         hotelPerNight = getData(TextBoxPerNight);
         accomodation = hotelPerDays * hotelPerNight;
@@ -161,10 +163,10 @@ public partial class _Default : System.Web.UI.Page
             kidsMeal = 0;
         }
 
-        double result = accomodation + taxi + bus + train + activities + shopping + meal + kidsMeal;
+        double result = flight + accomodation + taxi + bus + train + activities + shopping + meal + kidsMeal;
 
 
-        ClientScript.RegisterStartupScript(GetType(), "draw", "draw('" + chartType + "','" + travel + "','" + result + "','" + accomodation + "','" + bus + "','" +
+        ClientScript.RegisterStartupScript(GetType(), "draw", "draw('" + chartType + "','" + travel + "','" + result + "','" + flight + "','" + accomodation + "','" + bus + "','" +
                                             meal + "','" + activities + "','" + train + "','" + taxi + "','" + shopping + "','" + kidsMeal + "');", true);
     }
 
