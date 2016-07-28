@@ -166,12 +166,9 @@
                     <asp:TextBox ID="TextBoxShopping"  CssClass="form-control txtBox" Width="180px" runat="server" ForeColor="Black"></asp:TextBox>
 
                     <br />
-                    <br />
-                     <asp:UpdatePanel ID="UpdatePanel4" runat="server">
-                            <ContentTemplate>                   
-                                <asp:Button ID="ButtonCalculate" href="#chartContainer" runat="server" Text="Calculate" OnClick="ButtonCalculate_Click" ForeColor="Black" CssClass="btn btn-default" />
-                            </ContentTemplate>
-                    </asp:UpdatePanel>
+                    <br />                             
+                    <asp:Button ID="ButtonCalculate" href="#chartContainer" runat="server" Text="Calculate" OnClick="ButtonCalculate_Click" ForeColor="Black" CssClass="btn btn-default" />
+
              </div>
         </div>
         

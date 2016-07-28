@@ -5,6 +5,11 @@ body
     background-color: white;
 }
 
+p
+{
+    height: auto;
+}
+
 .dataEntryArea
 {
     background-color: grey;
