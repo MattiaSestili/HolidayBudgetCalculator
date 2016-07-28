@@ -4,7 +4,7 @@
     var chart = new CanvasJS.Chart("chartContainer",
 	{
         title: {
-	        text: "The budget for " + travel + " is: " + result,
+	        text: "The budget for " + travel + " is: " + result + "£",
 	    },
 	    animationEnabled: true,
 	    legend: {

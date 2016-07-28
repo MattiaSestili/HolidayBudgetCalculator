@@ -40,7 +40,7 @@
             <div class="col-sm-9 dataEntryArea">     
                  
                 <div class="col-sm-3 flightCostStyle">  
-
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                     <p>Flight Costs</p>
 
                         <asp:Label ID="labelPlace" runat="server" Text="Where are you going?"></asp:Label>
@@ -58,10 +58,13 @@
 
                         <asp:Label ID="Label5" runat="server" Text="Adult:"></asp:Label>
                         <br/>
-                        <asp:Button ID="ButtonLessPerson" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessPerson_Click" CssClass="btn btn-default" />
-                        <asp:TextBox ID="TextBoxPeople" runat="server" OnTextChanged="TextBoxPeople_TextChanged" CssClass="form-control txtBox" AutoPostBack="True" ForeColor="Black" Width="180px"></asp:TextBox>
-                        <asp:Button ID="ButtonAddPerson" runat="server" Text="+" OnClick="ButtonAddPerson_Click" ForeColor="Black" CssClass="btn btn-default"/>
-                        <asp:Image ID="ImagePerson1" runat="server" ImageUrl="person-icon.png" Height="42px" Width="20px"/>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Button ID="ButtonLessPerson" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessPerson_Click" CssClass="btn btn-default" />
+                            <asp:TextBox ID="TextBoxPeople" runat="server" OnTextChanged="TextBoxPeople_TextChanged" CssClass="form-control txtBox" AutoPostBack="True" ForeColor="Black" Width="180px"></asp:TextBox>
+                            <asp:Button ID="ButtonAddPerson" runat="server" Text="+" OnClick="ButtonAddPerson_Click" ForeColor="Black" CssClass="btn btn-default"/>
+                      
+                         <asp:Image ID="ImagePerson1" runat="server" ImageUrl="person-icon.png" Height="42px" Width="20px"/>
                         &nbsp;
                         <asp:Image ID="ImagePerson2" runat="server" ImageUrl="person-icon.png" Height="42px" Width="20px"/>
                         &nbsp;
@@ -70,42 +73,49 @@
                         <asp:Image ID="ImagePerson4" runat="server" ImageUrl="person-icon.png" Height="42px" Width="20px"/>
                         &nbsp;
                         <asp:Image ID="ImagePlusPerson" runat="server" ImageUrl= "plus-icon-person.png" Height="22px" Width="25px"/>
-                      
+                        </ContentTemplate>  
+                    </asp:UpdatePanel> 
                         <br/>
                         <br/>
                         <asp:Label ID="Label6" runat="server" Text="Kids:"></asp:Label>
                         <br/>
-                        <asp:Button ID="ButtonLessKid" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessKid_Click" CssClass="btn btn-default" />
-                        <asp:TextBox ID="TextBoxKids" runat="server" OnTextChanged="TextBoxKids_TextChanged" CssClass="form-control txtBox" Width="180px" AutoPostBack="True" ForeColor="Black"></asp:TextBox>
-                        <asp:Button ID="ButtonAddKid" runat="server" Text="+" ForeColor="Black" OnClick="ButtonAddKid_Click" CssClass="btn btn-default" />
-                        <asp:Image ID="ImageKid1" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
-                         &nbsp;
-                        <asp:Image ID="ImageKid2" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
-                         &nbsp;    
-                        <asp:Image ID="ImageKid3" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
-                         &nbsp;    
-                        <asp:Image ID="ImageKid4" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
-                          &nbsp;    
-                         <asp:Image ID="ImagePlusKid" runat="server" ImageUrl= "plus-icon-person.png" Height="22px" Width="25px"/>
-                 
+                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                        <ContentTemplate>
+                             <asp:Button ID="ButtonLessKid" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessKid_Click" CssClass="btn btn-default" />
+                            <asp:TextBox ID="TextBoxKids" runat="server" OnTextChanged="TextBoxKids_TextChanged" CssClass="form-control txtBox" Width="180px" AutoPostBack="True" ForeColor="Black"></asp:TextBox>
+                            <asp:Button ID="ButtonAddKid" runat="server" Text="+" ForeColor="Black" OnClick="ButtonAddKid_Click" CssClass="btn btn-default" />
+                            <asp:Image ID="ImageKid1" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
+                             &nbsp;
+                            <asp:Image ID="ImageKid2" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
+                             &nbsp;    
+                            <asp:Image ID="ImageKid3" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
+                             &nbsp;    
+                            <asp:Image ID="ImageKid4" runat="server" ImageUrl="039.png" Height="50px" Width="30px"/>
+                              &nbsp;    
+                             <asp:Image ID="ImagePlusKid" runat="server" ImageUrl= "plus-icon-person.png" Height="22px" Width="25px"/>
+                         </ContentTemplate>
+                 </asp:UpdatePanel>
                         <br/>
                         <br/>
 
                     <p>How many nights?</p>
-
-                        <asp:Button ID="ButtonLessDays" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessDays_Click" CssClass="btn btn-default" />
-                        <asp:TextBox ID="TextBoxDays" runat="server" CssClass="form-control txtBox" Width="180px" ForeColor="Black" OnTextChanged="TextBoxDays_TextChanged" AutoPostBack="True"></asp:TextBox>
-                        <asp:Button ID="ButtonAddDays" runat="server" Text="+" ForeColor="Black" OnClick="ButtonAddDays_Click" CssClass="btn btn-default" />
-                        <asp:Image ID="ImageHouse1" runat="server" ImageUrl="caldays-icon.png" Width="22px" height="25px"/>
-                        &nbsp;<asp:Image ID="ImageHouse2" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
-                        &nbsp;<asp:Image ID="ImageHouse3" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
-                        &nbsp;<asp:Image ID="ImageHouse4" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
-                        &nbsp;<asp:Image ID="ImagePlusHouse" runat="server" ImageUrl="plus-icon-person.png" Width="22px" Height="25px"/>
-
+                      <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                            <ContentTemplate>
+                                <asp:Button ID="ButtonLessDays" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessDays_Click" CssClass="btn btn-default" />
+                                <asp:TextBox ID="TextBoxDays" runat="server" CssClass="form-control txtBox" Width="180px" ForeColor="Black" OnTextChanged="TextBoxDays_TextChanged" AutoPostBack="True"></asp:TextBox>
+                                <asp:Button ID="ButtonAddDays" runat="server" Text="+" ForeColor="Black" OnClick="ButtonAddDays_Click" CssClass="btn btn-default" />
+                                <asp:Image ID="ImageHouse1" runat="server" ImageUrl="caldays-icon.png" Width="22px" height="25px"/>
+                                &nbsp;<asp:Image ID="ImageHouse2" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
+                                &nbsp;<asp:Image ID="ImageHouse3" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
+                                &nbsp;<asp:Image ID="ImageHouse4" runat="server" ImageUrl="caldays-icon.png" Width="22px" Height="25px"/>
+                                &nbsp;<asp:Image ID="ImagePlusHouse" runat="server" ImageUrl="plus-icon-person.png" Width="22px" Height="25px"/>
+                            
                         <br/>
                         <asp:Label ID="Label7" runat="server" Text="Price per night"></asp:Label>
                         <br/>    
                         <asp:TextBox ID="TextBoxPerNight" runat="server" placeholder="Amount Per Night" ForeColor="Black" CssClass="form-control txtBox" Width="180px"></asp:TextBox>                      
+                    </ContentTemplate>
+                        </asp:UpdatePanel>
             </div>
         
         
@@ -157,9 +167,12 @@
 
                     <br />
                     <br />
-                    <asp:Button ID="ButtonCalculate" runat="server" Text="Calculate" OnClick="ButtonCalculate_Click" ForeColor="Black" CssClass="btn btn-default" />
-                   
-                </div>
+                     <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+                            <ContentTemplate>                   
+                                <asp:Button ID="ButtonCalculate" href="#chartContainer" runat="server" Text="Calculate" OnClick="ButtonCalculate_Click" ForeColor="Black" CssClass="btn btn-default" />
+                            </ContentTemplate>
+                    </asp:UpdatePanel>
+             </div>
         </div>
         
        
