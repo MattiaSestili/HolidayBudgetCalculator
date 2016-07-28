@@ -7,12 +7,6 @@
 	        text: "The budget for " + travel + " is: " + result + "£",
 	    },
 	    animationEnabled: true,
-	    legend: {
-	        verticalAlign: "center",
-	        horizontalAlign: "left",
-	        fontSize: 20,
-	        fontFamily: "Helvetica"
-	    },
 	    theme: "theme2",
 	    data: [
 		{
