@@ -1,6 +1,5 @@
 ﻿draw = function (chartType, travel, result, flight, accomodation, bus, meal, activities, train, taxi, shopping, kidsMeal) {
 
-
     var chart = new CanvasJS.Chart("chartContainer",
 	{
         title: {
@@ -16,15 +15,15 @@
 		    indexLabel: "{label} £{y}",
 		    startAngle: -20,
 		    dataPoints: [
-                { y: flight, label: "Flight" },
-				{ y: accomodation, label: "Accomodation" },
-				{ y: taxi, label: "Taxi" },
-				{ y: bus,  label: "Bus" },
-				{ y: train, label: "Train" },
-		        { y: shopping, label: "Shopping" },
-	            { y: activities, label: "Activities" },
-                { y: meal, label: "Meal" },
-                { y: kidsMeal, label: "Kids Meal" }
+                { y: parseloat(flight), label: "Flight" },
+				{ y: parseFloat(accomodation), label: "Accomodation" },
+				{ y: parseFloat(bus), label: "Taxi" },
+				{ y: parseFloat(meal),  label: "Bus" },
+				{ y: parseFloat(activities), label: "Train" },
+		        { y: parseFloat(train), label: "Shopping" },
+	            { y: parseFloat(taxi), label: "Activities" },
+                { y: parseFloat(shopping), label: "Meal" },
+                { y: parseFloat(kidsMeal), label: "Kids Meal" }
 		    ]
 		}
 	    ]

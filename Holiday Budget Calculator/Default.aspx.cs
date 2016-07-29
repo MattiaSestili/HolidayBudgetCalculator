@@ -49,9 +49,6 @@ public partial class _Default : System.Web.UI.Page
             ImagePlusPerson.Visible = false;
             ImagePlusKid.Visible = false;
 
-            TextBoxPeople.Text = "0";
-            TextBoxKids.Text = "0";
-            TextBoxDays.Text = "0";
         }
     }
 

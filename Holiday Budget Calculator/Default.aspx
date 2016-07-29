@@ -113,7 +113,7 @@
                         <br/>
                         <asp:Label ID="Label7" runat="server" Text="Price per night"></asp:Label>
                         <br/>    
-                        <asp:TextBox ID="TextBoxPerNight" runat="server" placeholder="Amount Per Night" ForeColor="Black" CssClass="form-control txtBox" Width="180px"></asp:TextBox>                      
+                        <asp:TextBox ID="TextBoxPerNight" runat="server" ForeColor="Black" CssClass="form-control txtBox" Width="180px"></asp:TextBox>                      
                     </ContentTemplate>
                         </asp:UpdatePanel>
             </div>
