@@ -25,7 +25,7 @@
  
 <form id="form1" runat="server">
 
-<div class="customContainer">
+<div class="container">
  
      <div class ="jumbotron">
        <h1>Holiday Budget Calculator</h1>
@@ -56,8 +56,8 @@
         
                     <p>How many people?</p>
 
-                        <asp:Label ID="Label5" runat="server" Text="Adult:"></asp:Label>
-                        <br/>
+                    <asp:Label ID="Label5" runat="server" Text="Adult:"></asp:Label>
+                    <br/>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <asp:Button ID="ButtonLessPerson" runat="server" Text="-" ForeColor="Black" OnClick="ButtonLessPerson_Click" CssClass="btn btn-default" />

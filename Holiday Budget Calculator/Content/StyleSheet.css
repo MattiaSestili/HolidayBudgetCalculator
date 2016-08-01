@@ -19,18 +19,12 @@ p
     font-weight: 400;
     border-radius: 25px;
 }
-.customContainer
-{
-    min-width: 300px;
-    max-width: 1300px;
-}
 
 .jumbotron 
 {
     color: white;
     background-image: url('../tokyo-street-at-night-high-quality-wallpaper.jpg');
-    background-repeat: no-repeat;
-    margin-left: 65px;
+    background-repeat: no-repeat; 
     border-radius: 10px;
     text-align: center;
 }
