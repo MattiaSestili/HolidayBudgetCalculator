@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
     double meal;
     double kidsMeal;
 
-
+    
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -48,6 +48,10 @@ public partial class _Default : System.Web.UI.Page
             ImagePlusHouse.Visible = false;
             ImagePlusPerson.Visible = false;
             ImagePlusKid.Visible = false;
+
+            TextBoxPeople.Text = "0";
+            TextBoxKids.Text = "0";
+            TextBoxDays.Text = "0";
 
         }
     }
@@ -133,6 +137,7 @@ public partial class _Default : System.Web.UI.Page
         lblChartType.Visible = true;
         DropDownList1.Visible = true;
         travel = TextBoxTravel.Text;
+        ScrollToBottom();
         drawChart(getChartType());
         
     }   
@@ -149,11 +154,11 @@ public partial class _Default : System.Web.UI.Page
         train = getData(TextBoxTrain);
         activities = getData(TextBoxActivities);
         shopping = getData(TextBoxShopping);
-        meal = getData(TextBoxEatAmount) * getData(TextBoxEatDays);
+        meal = (getData(TextBoxEatAmount) * getData(TextBoxEatDays)) * numberPeople;
 
-        if (CheckBoxKids.Checked == true)
+        if (numberKids != 0)
         {
-            kidsMeal = meal * 0.2;
+            kidsMeal = (meal * 0.2) * numberKids;
         }
         else
         {
@@ -165,6 +170,8 @@ public partial class _Default : System.Web.UI.Page
 
         ClientScript.RegisterStartupScript(GetType(), "draw", "draw('" + chartType + "','" + travel + "','" + result + "','" + flight + "','" + accomodation + "','" + bus + "','" +
                                             meal + "','" + activities + "','" + train + "','" + taxi + "','" + shopping + "','" + kidsMeal + "');", true);
+
+        
     }
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,7 +205,28 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
-//the rest of the file is to do with displaying icons
+    public static void ScrollToBottom()
+    {
+        string strScript = @"var manager = Sys.WebForms.PageRequestManager.getInstance(); 
+            manager.add_beginRequest(beginRequest); 
+            function beginRequest() 
+            { 
+                manager._scrollPosition = null; 
+            }
+            window.scroll(1000, 1000);";
+
+        Page pagCurrent = GetCurrentPage();
+        ScriptManager.RegisterStartupScript(pagCurrent, pagCurrent.GetType(), string.Empty, strScript, true);
+
+        return;
+    }
+
+    public static Page GetCurrentPage()
+    {
+        return (HttpContext.Current.Handler as Page);
+    }
+
+    //the rest of the file is to do with displaying icons
     public void callCalendar(int number)
     {
         switch (number)

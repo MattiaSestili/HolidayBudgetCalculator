@@ -1,7 +1,6 @@
 ﻿
 body 
 {
-
     background-color: white;
 }
 
@@ -41,21 +40,21 @@ p
 /*i changed thead fixed width of the flight column to a min-width and also gave the
     other columns a min-width - that stopped them getting tangled when the screen size was reduced
 */ 
+.row
+{
+   margin-left: 0;
+}
+
 .flightCostStyle
 {
-   min-width: 300px;
+   min-width: 360px;
    margin-bottom: 10px;
-}
-.transportsStyle
-{
-   /*margin-left: 25%;*/
-   min-width: 250px;
 }
 
 .daycostParagraph
 {
    /*margin-left: 20px;*/
-   min-width: 250px;
+   min-width: 260px;
 }
 
 /*I took off the big right margin and did a right float instead*/
