@@ -137,7 +137,7 @@
        
         <div class ="col-sm-3 daycostParagraph">
                 <p> Days Costs</p>              
-                    <asp:Label ID="Label2" runat="server" Text="Budget meals out?"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Budget meals out per person?"></asp:Label>
                     <br/>               
                     <asp:TextBox ID="TextBoxEatAmount" runat="server" CssClass="form-control txtBox" ForeColor="Black"></asp:TextBox>
                     <br/>
@@ -167,11 +167,10 @@
             
             <h2>Things to think about</h2>
                 <p>
-                Deciding how much money to take on holiday can feel like plucking a figure out of the air.
-                But if you break it down and think about <br />
-                what you might spend in a few key areas,
-                you can get a realistic travel budget in mind. 
-                Use our travel budget calculator, so you can plan ahead and avoid any spending shocks along the way.
+               Deciding how much money to take on holiday can feel like plucking a figure out of the air. 
+               However, if you break it down and think about  what you might spend in a few key areas, 
+               you can get a realistic travel budget in mind. Use our travel budget calculator, 
+               so you can plan ahead and avoid any spending shocks along the way.
                 </p>
         </div>  
      </div>      
