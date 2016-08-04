@@ -137,11 +137,11 @@
        
         <div class ="col-sm-3 daycostParagraph">
                 <p> Days Costs</p>              
-                    <asp:Label ID="Label2" runat="server" Text="Budget meals out per person?"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Budget meals per person?"></asp:Label>
                     <br/>               
                     <asp:TextBox ID="TextBoxEatAmount" runat="server" CssClass="form-control txtBox" ForeColor="Black"></asp:TextBox>
                     <br/>
-                    <asp:Label ID="Label9" runat="server" Text="How many time will you eat out?"></asp:Label>
+                    <asp:Label ID="Label9" runat="server" Text="How many times do you plan to eat out?"></asp:Label>
                     <br/>
                     <asp:TextBox ID="TextBoxEatDays" runat="server" CssClass="form-control txtBox" ForeColor="Black"></asp:TextBox>
                     <br/>

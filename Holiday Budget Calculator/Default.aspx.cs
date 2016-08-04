@@ -154,11 +154,11 @@ public partial class _Default : System.Web.UI.Page
         train = getData(TextBoxTrain);
         activities = getData(TextBoxActivities);
         shopping = getData(TextBoxShopping);
-        meal = (getData(TextBoxEatAmount) * getData(TextBoxEatDays)) * numberPeople;
+        meal = getData(TextBoxEatAmount) * getData(TextBoxEatDays) * getData(TextBoxPeople);
 
-        if (numberKids != 0)
+        if (getData(TextBoxKids) != 0)
         {
-            kidsMeal = (meal * 0.2) * numberKids;
+            kidsMeal = getData(TextBoxEatAmount) * getData(TextBoxEatDays) * 0.5 * getData(TextBoxKids);
         }
         else
         {
